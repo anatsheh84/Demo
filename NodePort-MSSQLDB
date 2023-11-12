@@ -50,6 +50,14 @@ volumes:
 - projected
 - secret
 ---
+kind: Secret
+apiVersion: v1
+metadata:
+  name: mssql
+data:
+  SA_PASSWORD: U3FsMjAxOWlzZmFzdA==
+type: Opaque
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
